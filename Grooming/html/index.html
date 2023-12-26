@@ -1,0 +1,767 @@
+-- Active: 1703403626338@@127.0.0.1@3306
+  <!DOCTYPE html>
+  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/bubbles.css">
+    <link rel="stylesheet" href="/CSS/loginsignup.css">
+    <link rel="stylesheet" href="/CSS/flipCard.css">
+    <script src="/html/php/process_signup.php" defer></script>
+    
+
+
+    <title>Document</title>
+</head>
+<body>
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <header id="main"> 
+           
+        <div class="parallax_background">
+
+          <div id="mySidenav" class="sidenav">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <a onclick="document.getElementById('id01').style.display='block'" id="login">Login</a>
+            <a onclick="document.getElementById('id02').style.display='block'" id="signup">Sign Up</a>
+        </div>
+        
+        <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <!-- The Modal for Login -->
+        <aside id="id01" class="modal" class="">
+            <div class="login-box">
+                <span class="dog-icon1">🐶</span>
+                <h2 style="text-align: center; color: #96683c;">Dog Grooming Login</h2>
+                <form  action="/html/php/process_signup.php" method="post">
+                    <div class="user-box">
+                        <input type="text" name="username" id="username" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="modal-buttons">
+                        <button type="submit" onclick="submitUser()" >Submit</button>
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+        
+        <!-- The Modal for Sign Up -->
+   <div> 
+        <aside id="id02" class="modal" class="modal slide-from-left UserProfile">
+            <div class="sign-up-box">
+                <div class="dog-icon2">🐶</div>
+                <h2 style="text-align: center; color: #96683c;">Sign Up</h2>
+                <form  method="post" action="/html/php/login.php" >
+                    <div class="user-box">
+                        <input type="text" name="username" id="userName" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="paswd" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="modal-buttons">
+
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+                        <button type="button" onclick="showDogDetailsForm()">Next</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+        <aside id="id03" class="modal slide-from-right UserProfile">
+          <div class="dog-details-box">
+              <div class="dog-icon3">🐾</div>
+              <h2 style="text-align: center; color: #4CAF50;">Dog Details</h2>
+              <form  method="post" action="/html/php/process_signup.php">
+                  <div class="dog-box">
+                      <label for="dogName">Dog's Name</label>
+                      <input type="text" name="dog_name" id="dogName" required>
+                  </div>
+                  <div class="dog-box">
+                      <label for="breed">Breed</label>
+                      <select name="breed" id="breedSelect" required>
+                          <option value="Affenpinscher">Affenpinscher</option>
+                          <option value="Afghan Hound">Afghan Hound</option>
+                          <option value="Africanis">Africanis</option>
+                         <option value="Aidi">Aidi</option>
+                          <option value="Airedale Terrier">Airedale Terrier</option>
+                          <option value="Akbash">Akbash</option>
+                          <option value="Akita">Akita</option>
+                          <option value="Aksaray Malaklisi">Aksaray Malaklisi</option>
+                          <option value="Alano Español">Alano Español</option>
+                          <option value="Alapaha Blue Blood Bulldog">Alapaha Blue Blood Bulldog</option>
+                          <option value="Alaskan husky">Alaskan husky</option>
+                          <option value="Alaskan Klee Kai">Alaskan Klee Kai</option>
+                          <option value="Alaskan Malamute">Alaskan Malamute</option>
+                          <option value="Alopekis">Alopekis</option>
+                          <option value="Alpine Dachsbracke">Alpine Dachsbracke[</option>
+                          <option value="American Bulldog"></option>
+                          <option value="American Bully">American Bully</option>
+                          <option value="American Cocker Spaniel">American Cocker Spaniel</option>
+                          <option value="American English Coonhound">American English Coonhound</option>
+                          <option value="American Eskimo Dog">American Eskimo Dog</option>
+                          <option value="American Foxhound">American Foxhound</option>
+                          <option value="American Hairless Terrier">American Hairless Terrier</option>
+                          <option value="American Leopard Hound">American Leopard Hound</option>
+                          <option value="American Pit Bull Terrier[2">American Pit Bull Terrier</option>
+                          <option value="American Staffordshire Terrier">American Staffordshire Terrier</option>
+                          <option value="American Water Spaniel">American Water Spaniel</option>
+                          <option value="Anglo-Français de Petite Vénerie">Anglo-Français de Petite Vénerie[</option>
+                          <option value="Appenzeller Sennenhund">Appenzeller Sennenhund</option>
+                          <option value="Ariège Pointer">Ariège Pointer</option>
+                          <option value="Ariégeois">Ariégeois</option>
+                          <option value="Argentine Pila">Argentine Pila</option>
+                          <option value="Armant">Armant</option>
+                          <option value="Armenian Gampr">Armenian Gampr</option>
+                          <option value="Artois Hound[">Artois Hound[</option>
+                          <option value="Assyrian Mastiff">Assyrian Mastiff</option>
+                          <option value="Australian Cattle Dog">Australian Cattle Dog</option>
+                          <option value="Australian Kelpie">Australian Kelpie</option>
+                          <option value="Australian Shepherd">Australian Shepherd</option>
+                          <option value="Australian Stumpy Tail Cattle Dog">Australian Stumpy Tail Cattle Dog</option>
+                          <option value="Australian Terrier">Australian Terrier</option>
+                          <option value="Austrian Black and Tan Hound">Austrian Black and Tan Hound</option>
+                          <option value="Austrian Pinscher">Austrian Pinscher</option>
+                          <option value="Australian Silky Terrier">Australian Silky Terrier[</option>
+                          <option value="Azawakh">Azawakh</option>
+                          <option value="Bắc Hà">Bắc Hà</option>
+                          <option value="Bakharwal">Bakharwal</option>
+                          <option value="Bankhar Dog">Bankhar Dog</option>
+                          <option value="Barak hound">Barak hound</option>
+                          <option value="Barbado da Terceira">Barbado da Terceira</option>
+                          <option value="Barbet">Barbet</option>
+                          <option value="Basenji">Basenji</option>
+                          <option value="Basque Shepherd Dog">Basque Shepherd Dog</option>
+                          <option value="Basset Artésien Normand">Basset Artésien Normand</option>
+                          <option value="Basset Bleu de Gascogne">Basset Bleu de Gascogne</option>
+                          <option value="Basset Fauve de Bretagne">Basset Fauve de Bretagne</option>
+                          <option value="Basset Hound">Basset Hound</option>
+                          <option value="Bavarian Mountain Hound">Bavarian Mountain Hound</option>
+                          <option value="Beagle">Beagle</option>
+                          <option value="Beagle-Harrier">Beagle-Harrier</option>
+                          <option value="Bearded Collie">Bearded Collie</option>
+                          <option value="Beauceron">Beauceron</option>
+                          <option value="Bedlington Terrier">Bedlington Terrier[</option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+
+                          <!-- Add more options as needed -->
+                      </select>
+                  </div>
+                  <div class="dog-box">
+                      <label for="age">Age</label>
+                     <select name="age" id="age">
+                       <option value="1">1</option>
+                       <option value="">2</option>
+                       <option value="">3</option>
+                       <option value="">4</option>
+                       <option value="">5</option>
+                       <option value="">6</option>
+                       <option value="">7</option>
+                       <option value="">8</option>
+                       <option value="">9</option>
+                       <option value="">10</option>
+                       <option value="">11</option>
+                       <option value="">12</option>
+                       <option value="">13</option>
+                       <option value="">14</option>
+                       <option value="">15</option>
+                       <option value="">16</option>
+                       <option value="">17</option>
+                       <option value="">18</option>
+                       <option value="">19</option>
+                       <option value="">20</option>
+                       <option value="">21</option>
+                       <option value="">22</option>
+                       <option value="">23</option>
+                       <option value="">24</option>
+                       <option value="">25</option>
+                       <option value="">26</option>
+                       <option value="">28</option>
+                       <option value="">29</option>
+                     </select>
+                  </div>
+                  <!-- Add more fields as needed -->
+      
+                  <div class="modal-buttons">
+                      <button type="submit" onclick="submitDogDetails()">Submit</button>
+                      <button type="button" onclick="document.getElementById('id03').style.display='none'">Cancel</button>
+                  </div>
+              </form>
+          </div>
+            
+      </aside>
+      <script src="/html/php/process_signup.php" defer></script>
+      </div>
+ 
+<!--bubbles-->
+    <div class="bubbles">
+
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        <img src="/assets/png/bubble.png" alt="bubbles">
+        
+    </div>
+
+  <!--content-text & about-->         
+</div>
+<div class="aboutContainer"> 
+  <h1 class="aboutus">ABOUT US</h1>
+  <p class="content_text"> 
+      As owner and founder of <strong>Emmanuel Pet Grooming</strong>, our groomers are proud to provide thorough grooming services for all sizes and breeds of dogs. As experienced professional groomers, we understand that you and your dog need to feel comfortable. 
+  </p>
+  <p class="content_text">
+      <strong>Emanuel Pet Grooming</strong> is based in a calm and clean home setting in compliance with a relaxed atmosphere and caters to all your dog's needs. Our groomers offer first-rate services that you and your dog are sure to appreciate. Unleash your dog's wellness and beauty! Your pet will be treated as one of our own and receive the care and attention your pet deserves. While your pet is at the grooming shed, they will have the time to rest, stretch their legs in the sanitized cage, and have a drink of water, so their experience with us is enjoyable.
+  </p>
+  <div class="twopuppies">
+
+  <img src="/assets/photos/all-dog-breeds-left__1_.png" alt=""> 
+  <img src="/assets/photos/all-dog-breeds-right__1_.png" alt="">
+
+</div>
+  <button class="contactbtn" type="button" name="button">CONTACT</button>
+ 
+</div>
+
+      </header>
+
+    <div class="parallax_background1">
+
+    </div>
+<div class="card-container">
+
+
+    <div class="flip-card"  onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="/assets/photos/beautiful.jpg" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card"  onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="flip-card"  onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+   </div>
+   <div class="card-container2">
+
+    <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+
+ 
+
+   </div>
+     
+<div class="parallax_background3">
+
+ <!-- parallax_background3 -->
+  
+</div>  
+
+<h3 style="display: flex; justify-content: center;">Business Hours</h3>
+  <!-- bussinesshours -->
+ <div class="bussinesshours">
+     
+      <div><span class="tuesday">Tuesday<span class="hours">10 A.M - 4 P.M</span></span></div>
+      <div><span class="wednesday">Wednesday<span class="hours">10 A.M - 4 P.M</span></span></div>
+      <div><span class="thursday">Thursday<span class="hours">10 A.M - 4 P.M</span></span></div>
+      <div><span class="friday">Friday<span class="hours">10 A.M - 4 P.M</span></span></div>
+      <div><span class="saturday">Saturday<span class="hours"> 8A.M - 4 P.M</span></span></div>
+      
+  </div> 
+
+<footer>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13225.527490673092!2d-118.1511277!3d34.0340742!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x33d2ca041ae08cc9!2sEmanuel%20Pet%20Grooming!5e0!3m2!1sen!2sus!4v1662597404668!5m2!1sen!2sus" width="100%" height="500" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="googleMaps"></iframe>
+</footer>
+           <!--SOCIAL MEDIA-->
+           <div class="social">
+            <a href="#">
+              <div class="social-btn color-telegram">
+                <div class="icons8-telegram-app"></div>
+                <p class="order-1 google-font margin-telgram">Telegram</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="social-btn color-instagram">
+                <div class="icons8-instagram"></div>
+                <p class="order-1 google-font margin-instagram">instagram</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="social-btn color-whatsapp">
+                <div class="icons8-whatsapp"></div>
+                <p class="order-1 google-font margin-instagram">whats app</p>
+              </div>
+            </a>
+          </div>
+          <!--SOCIAL MEDIA-->
+
+          <script src="/javascript/main.js" defer></script>
+          <script src="/html/php/process_signup.php" defer></script>
+         
+         
+</body>
+</html>
+
+
+
+
+
