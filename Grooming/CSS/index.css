@@ -39,7 +39,7 @@
 .parallax_background {
   width: 100%;
   height: 100vh;
-  background: url(/assets/img/Whitepoodle.PNG);
+  background: url(/Grooming/assets/img/Whitepoodle.PNG);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -107,7 +107,7 @@
 .parallax_background1{
     width: 100%;
     height: 50vh;
-    background: url(/assets/img/puppyeyes1.jpg);
+    background: url(/Grooming/assets/img/puppyeyes1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -184,77 +184,11 @@
   }
    
  }
- .parallax_background1 {
+
+.parallax_background2 {
   width: 100%;
   height: 50vh;
-  background: url(/assets/img/puppyeyes1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 480px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 480px;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 430px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 428px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 414px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 412px;
-  }
-}
-
-@media screen and (max-width: 393px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 393px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 384px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .parallax_background1 {
-    height: 230px;
-    max-width: 360px;
-  }
-}
-
-.parallax_background3 {
-  width: 100%;
-  height: 50vh;
-  background: url(/assets/img/worker/worker1.jpg);
+  background: url(/Grooming/assets/img/worker/worker1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

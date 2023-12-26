@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmtDog->execute()) {
             // Registration successful, echo a JavaScript script to redirect
-            echo "<script>window.location.href='/html/dashboard.html';</script>";
+            echo "<script>window.location.href='/Grooming/html/dashboard.html';</script>";
             exit(); // Ensure that no further code is executed after the redirect
         } else {
             echo "Registration failed for dog details";
@@ -57,7 +57,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "Invalid request";
 }
-?>
 
-
-
+?/>
