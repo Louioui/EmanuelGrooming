@@ -6,152 +6,173 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    var modals = document.getElementsByClassName('modal');
-    for (var i = 0; i < modals.length; i++) {
-        if (event.target == modals[i]) {
-            modals[i].style.display = "none";
+document.body.addEventListener('click', function (event) {
+    let modals = document.getElementsByClassName('modal');
+    for (const element of modals) {
+        if (event.target === element) {
+            element.style.display = 'none';
+        }
+    }
+});
+
+function submitUser(event) {
+    event.preventDefault();
+
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+
+    let formData = new FormData();
+    formData.append('username', username);
+    formData.append('password', password);
+
+    fetch('/Grooming/php/process_signup.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // Handle the response from the server
+        // You can perform additional actions based on the server response
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    document.getElementById('loginModal').style.display = 'none';
+}
+
+function submitDogDetails() {
+
+    let dogName = document.getElementById('dogName').value;
+    let breed = document.getElementById('breedSelect').value;
+    let age = document.getElementById('age').value;
+
+    let formData = new FormData();
+    formData.append('dog_name', dogName);
+    formData.append('breed', breed);
+    formData.append('age', age);
+
+    fetch('/Grooming/php/process_signup.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // Handle the response from the server
+        // You can perform additional actions based on the server response
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    document.getElementById('dogDetailsModal').style.display = 'none';
+}
+
+
+function signupUser(event) {
+    event.preventDefault();
+
+    let username = document.getElementById('userName').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('paswd').value;
+
+    let formData = new FormData();
+    formData.append('username', username);
+    formData.append('email', email);
+    formData.append('password', password);
+
+    fetch('/Grooming/php/process_signup.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // Handle the response from the server
+        // You can perform additional actions based on the server response
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+    document.getElementById('signupModal').style.display = 'none';
+}
+
+function showDogDetailsForm() {
+    // Add logic to show the Dog Details form, for example:
+    document.getElementById('signupModal').style.display = 'none';
+    document.getElementById('dogDetailsModal').style.display = 'block';
+}
+
+function validateSignUpForm() {
+    let username = document.getElementById('userName').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('paswd').value;
+
+    if (username === '' || email === '' || password === '') {
+        alert('Please fill in all fields.');
+        return false;
+    }
+
+    // Add more validation logic as needed
+
+    return true;
+}
+
+function validateDogDetailsForm() {
+    let dogName = document.getElementById('dogName').value;
+    let breed = document.getElementById('breedSelect').value;
+    let age = document.getElementById('age').value;
+
+    if (dogName === '' || breed === '' || age === '') {
+        alert('Please fill in all fields.');
+        return false;
+    }
+
+    // Add more validation logic as needed
+
+    return true;
+}
+
+function filterBreeds() {
+    let input = document.getElementById('breedSearch').value.toUpperCase();
+    let select = document.getElementById('breedSelect');
+    let options = select.getElementsByTagName('option');
+
+    for (const element of options) {
+        let option = element;
+        let txtValue = option.textContent || option.innerText;
+
+        if (txtValue.toUpperCase().indexOf(input) > -1) {
+            option.style.display = '';
+        } else {
+            option.style.display = 'none';
         }
     }
 }
 
-    function submitUser() {
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
+// Event listeners
+document.getElementById('signupCancelBtn').addEventListener('click', function() {
+    document.getElementById('signupModal').style.display = 'none';
+});
 
-        var formData = new FormData();
-        formData.append('username', username);
-        formData.append('password', password);
+document.getElementById('signupNextBtn').addEventListener('click', showDogDetailsForm);
 
-        fetch('/php/login.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            // Handle the response from the server
-            // You can perform additional actions based on the server response
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-
-        document.getElementById('id01').style.display = 'none';
+document.getElementById('dogDetailsSubmitBtn').addEventListener('click', function() {
+    if (confirm('Are you sure you want to submit the form?')) {
+        submitDogDetails();
     }
+});
 
-    function signupUser() {
-        var username = document.getElementById('userName').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('paswd').value;
+document.getElementById('dogDetailsCancelBtn').addEventListener('click', function() {
+    document.getElementById('dogDetailsModal').style.display = 'none';
+});
 
-        var formData = new FormData();
-        formData.append('username', username);
-        formData.append('email', email);
-        formData.append('password', password);
-
-        fetch('/php/process_signup.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            // Handle the response from the server
-            // You can perform additional actions based on the server response
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-
-        document.getElementById('id02').style.display = 'none';
-    }
-
-   
-    function showDogDetailsForm() {
-        // Add logic to show the Dog Details form, for example:
-        document.getElementById('id02').style.display = 'none';
-        document.getElementById('id03').style.display = 'block';
-    }
-
-    function validateSignUpForm() {
-        // Add validation logic for the Sign Up form
-        var username = document.getElementById('userName').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('paswd').value;
-
-        // Example validation: Check if fields are not empty
-        if (username === '' || email === '' || password === '') {
-            alert('Please fill in all fields.');
-            return false;
-        }
-
-        // Add more validation logic as needed
-
-        return true;
-    }
-
-    function validateDogDetailsForm() {
-        // Add validation logic for the Dog Details form
-        var dogName = document.getElementById('dogName').value;
-        var breed = document.getElementById('breedSelect').value;
-        var age = document.getElementById('age').value;
-
-        // Example validation: Check if fields are not empty
-        if (dogName === '' || breed === '' || age === '') {
-            alert('Please fill in all fields.');
-            return false;
-        }
-
-        // Add more validation logic as needed
-
-        return true;
-    }
-
-    function filterBreeds() {
-        // Add logic for filtering breeds based on user input
-        var input = document.getElementById('breedSearch').value.toUpperCase();
-        var select = document.getElementById('breedSelect');
-        var options = select.getElementsByTagName('option');
-
-        for (var i = 0; i < options.length; i++) {
-            var option = options[i];
-            var txtValue = option.textContent || option.innerText;
-
-            if (txtValue.toUpperCase().indexOf(input) > -1) {
-                option.style.display = '';
-            } else {
-                option.style.display = 'none';
-            }
-        }
-    }
-
-    // Add event listeners
-    document.getElementById('id02-cancel-btn').addEventListener('click', function() {
-        document.getElementById('id02').style.display = 'none';
-    });
-
-    document.getElementById('id02-next-btn').addEventListener('click', showDogDetailsForm);
-
-    document.getElementById('id03-submit-btn').addEventListener('click', function() {
-        if (confirm('Are you sure you want to submit the form?')) {
-            submitDogDetails();
-        }
-    });
-
-    document.getElementById('id03-cancel-btn').addEventListener('click', function() {
-        document.getElementById('id03').style.display = 'none';
-    });
-
-    
-    function flipCard(card) {
-        card.classList.toggle('clicked');
-      }
-
-
-
-
+function flipCard(card) {
+    card.classList.toggle('clicked');
+}
 
 
 

@@ -21,18 +21,18 @@
 
           <div id="mySidenav" class="sidenav">
             <a class="closebtn" onclick="closeNav()">&times;</a>
-            <a onclick="document.getElementById('id01').style.display='block'" id="login">Login</a>
-            <a onclick="document.getElementById('id02').style.display='block'" id="signup">Sign Up</a>
+            <a onclick="document.getElementById('loginModal').style.display='block'" id="login">Login</a>
+            <a onclick="document.getElementById('signupModal').style.display='block'" id="signup">Sign Up</a>
         </div>
         
         <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
         
         <!-- The Modal for Login -->
-        <aside id="id01" class="modal" class="">
+        <aside id="loginModal" class="modal">
             <div class="login-box">
                 <span class="dog-icon1">🐶</span>
                 <h2 style="text-align: center; color: #96683c;">Dog Grooming Login</h2>
-                <form  action="/html/php/process_signup.php" method="post">
+                <form  action="/Grooming/php/process_signup.php" method="post">
                     <div class="user-box">
                         <input type="text" name="username" id="username" required>
                         <label for="username">Username</label>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="modal-buttons">
                         <button type="submit" onclick="submitUser()" >Submit</button>
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                        <button type="button" onclick="document.getElementById('loginModal').style.display='none'">Cancel</button>
                     </div>
                 </form>
             </div>
@@ -51,11 +51,11 @@
         
         <!-- The Modal for Sign Up -->
    <div> 
-        <aside id="id02" class="modal" class="modal slide-from-left UserProfile">
+        <aside id="signupModal" class="modal" class="modal slide-from-left UserProfile">
             <div class="sign-up-box">
                 <div class="dog-icon2">🐶</div>
                 <h2 style="text-align: center; color: #96683c;">Sign Up</h2>
-                <form  method="post" action="/html/php/login.php" >
+                <form  method="post" action="/Grooming/php/process_signup.php" >
                     <div class="user-box">
                         <input type="text" name="username" id="userName" required>
                         <label for="username">Username</label>
@@ -70,18 +70,18 @@
                     </div>
                     <div class="modal-buttons">
 
-                        <button type="button" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+                        <button type="button" onclick="document.getElementById('signupModal').style.display='none'">Cancel</button>
                         <button type="button" onclick="showDogDetailsForm()">Next</button>
                     </div>
                 </form>
             </div>
         </aside>
 
-        <aside id="id03" class="modal slide-from-right UserProfile">
+        <aside id="dogDetailsModal" class="modal slide-from-right UserProfile">
           <div class="dog-details-box">
               <div class="dog-icon3">🐾</div>
               <h2 style="text-align: center; color: #4CAF50;">Dog Details</h2>
-              <form  method="post" action="/html/php/process_signup.php">
+              <form  method="post" action="/Grooming/php/process_signup.php">
                   <div class="dog-box">
                       <label for="dogName">Dog's Name</label>
                       <input type="text" name="dog_name" id="dogName" required>
@@ -420,7 +420,7 @@
       
                   <div class="modal-buttons">
                       <button type="submit" onclick="submitDogDetails()">Submit</button>
-                      <button type="button" onclick="document.getElementById('id03').style.display='none'">Cancel</button>
+                      <button type="button" onclick="document.getElementById('dogDetailsModal').style.display='none'">Cancel</button>
                   </div>
               </form>
           </div>

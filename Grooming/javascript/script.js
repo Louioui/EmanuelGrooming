@@ -1,6 +1,6 @@
 function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    var content = document.querySelector(".content");
+    let sidebar = document.getElementById("sidebar");
+    let content = document.querySelector(".content");
 
     if (sidebar.style.width === "250px") {
         sidebar.style.width = "0";

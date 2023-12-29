@@ -1,16 +1,18 @@
-
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve user signup data
-    $username = $_POST['username'];
-    $email = $_POST['email'];
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password for security
 
     // Database connection details
     $host = 'localhost';
     $user = 'root';
     $password_db = 'password';
-    $database = 'localhost';
+    $database = 'localhost'; // Change this to your actual database name
 
     // Create a database connection
     $conn = new mysqli($host, $user, $password_db, $database);
@@ -26,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         // User registration successful, now insert dog details
-        $dogName = $_POST["dog_name"];
-        $selectedBreed = $_POST["breed"];
-        $age = $_POST["age"];
+        $dogName = htmlspecialchars($_POST["dog_name"]);
+        $selectedBreed = htmlspecialchars($_POST["breed"]);
+        $age = htmlspecialchars($_POST["age"]);
 
         // Get the user ID of the newly registered user
         $userId = $conn->insert_id;
@@ -42,13 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "<script>window.location.href='/Grooming/html/dashboard.html';</script>";
             exit(); // Ensure that no further code is executed after the redirect
         } else {
-            echo "Registration failed for dog details";
+            echo "Registration failed for dog details: " . $stmtDog->error;
         }
-        
+
         // Close the dog details statement
         $stmtDog->close();
     } else {
-        echo "Registration failed";
+        echo "Registration failed: " . $stmt->error;
     }
 
     // Close the user registration statement and the connection
@@ -57,5 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "Invalid request";
 }
+?>
 
-?/>
+
