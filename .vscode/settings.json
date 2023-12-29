@@ -8,9 +8,11 @@
         "Alapaha",
         "Alopekis",
         "backref",
+        "bussinesshours",
         "Dachsbracke",
         "Malaklisi",
-        "sqlalchemy"
+        "sqlalchemy",
+        "wtforms"
     ],
     
     "github.copilot.chat.welcomeMessage": "always",
