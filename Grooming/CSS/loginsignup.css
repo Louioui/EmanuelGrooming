@@ -88,7 +88,6 @@ input[type="email"]:focus,
 .user-box input:focus~label,
 .user-box input:valid~label {
   top: -15px;
-  font-size: 1px;
   color: #65a4f0;
   display: none;
 }
