@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "aboutus",
         "Africanis",
         "Aidi",
         "Akbash",
@@ -9,9 +10,15 @@
         "Alopekis",
         "backref",
         "bussinesshours",
+        "closebtn",
+        "closedhr",
+        "contactbtn",
         "Dachsbracke",
         "Malaklisi",
+        "sidenav",
         "sqlalchemy",
+        "twopuppies",
+        "werkzeug",
         "wtforms"
     ],
     

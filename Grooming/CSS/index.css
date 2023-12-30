@@ -657,3 +657,103 @@ button.contactbtn{
  height: auto;
 
 }
+
+@media screen and (max-width: 480px){
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+ .twopuppies img{
+  width: 480px;
+  height: 480px;
+ };
+}
+@media  screen and (max-width: 430px) {
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+
+.twopuppies img {
+  width: 430px;
+  height: 430px;
+};
+  
+}
+@media  screen and (max-width: 428px) {
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+ 
+   .twopuppies img {
+    width: 430px;
+    height: 430px;
+   }
+ }
+ @media  screen and (max-width: 414px) {
+  
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+
+ .twopuppies img{
+  width: 414px;
+  height: 414px;
+ }
+   
+ }
+ @media screen and (max-width: 412px) {
+
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+
+ .twopuppies img{
+  width: 414px;
+  height: 414px;
+ }
+ }
+ @media  screen and (max-width: 393px) {
+  
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+
+ .twopuppies img{
+  width: 414px;
+  height: 414px;
+ }
+   
+ }
+ @media screen and (max-width: 384px) {
+  
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+
+ .twopuppies img{
+  width: 414px;
+  height: 414px;
+ }
+   
+ }
+ @media screen and (max-width: 360px) {
+  
+  .twopuppies{
+    margin: auto auto auto auto;
+    padding: auto auto auto auto;
+  }
+
+ .twopuppies img{
+  width: 414px;
+  height: 414px;
+ }
+ }
+
+
+
