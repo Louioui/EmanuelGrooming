@@ -25,7 +25,7 @@ function submitUser(event) {
     formData.append('username', username);
     formData.append('password', password);
 
-    fetch('/Grooming/php/process_signup.php', {
+    fetch('/Grooming/html/python/index.py', {
         method: 'POST',
         body: formData
     })
@@ -53,7 +53,7 @@ function submitDogDetails() {
     formData.append('breed', breed);
     formData.append('age', age);
 
-    fetch('/Grooming/php/process_signup.php', {
+    fetch('/Grooming/html/python/index.py', {
         method: 'POST',
         body: formData
     })
@@ -83,7 +83,7 @@ function signupUser(event) {
     formData.append('email', email);
     formData.append('password', password);
 
-    fetch('/Grooming/php/process_signup.php', {
+    fetch('/Grooming/html/python/index.py', {
         method: 'POST',
         body: formData
     })

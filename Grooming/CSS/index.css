@@ -1,36 +1,3 @@
-/* @media screen and (max-width: 480px){
- 
-}
-@media  screen and (max-width: 430px) {
-
-
-  
-}
-@media  screen and (max-width: 428px) {
- 
-   
- }
- @media  screen and (max-width: 414px) {
- 
-   
- }
- @media  screen and (max-width: 412px) {
-
-   
- }
- @media  screen and (max-width: 393px) {
-
-   
- }
- @media  screen and (max-width: 384px) {
- 
-   
- }
- @media  screen and (max-width: 360px) {
-  
-   
- }*/
-
 
  body{
   background-color: white; /*#afd8f2*/
@@ -39,69 +6,12 @@
 .parallax_background {
   width: 100%;
   height: 100vh;
-  background: url(/Grooming/assets/img/Whitepoodle.PNG);
+  background: url(/Grooming/assets/img/background/poodle.JPG);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (max-width: 480px) {
-  .parallax_background {
-    max-width: 480px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .parallax_background {
-    max-width: 430px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .parallax_background {
-    max-width: 428px;
-    height: 230px;
-    background-position: top -50%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .parallax_background {
-    max-width: 414px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .parallax_background {
-    max-width: 412px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 393px) {
-  .parallax_background {
-    max-width: 393px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .parallax_background {
-    max-width: 384px;
-    height: 230px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .parallax_background {
-    max-width: 360px;
-    height: 230px;
-  }
 }
 
 .parallax_background1{
@@ -114,76 +24,6 @@
     position: relative;
     overflow: hidden;
 }
-@media screen and (max-width: 480px){
-  .parallax_background1{
-    height: 230px;
-    width: 480px;
-  }
-}
-@media  screen and (max-width: 430px) {
-
- .parallax_background1{
-
-  height: 230px;
-  width: 430px
-
- }
-  
-}
-@media  screen and (max-width: 428px) {
-  .parallax_background1{
-
-   height: 230px;
-   width: 428px;
- 
-  }
-   
- }
- @media  screen and (max-width: 414px) {
-  .parallax_background1{
-
-   height: 230px;
-   width: 414px;
- 
-  }
-   
- }
- @media  screen and (max-width: 412px) {
-  .parallax_background1{
-
-   height: 230px;
-   width: 412px;
- 
-  }
-   
- }
- @media  screen and (max-width: 393px) {
-  .parallax_background1{
-
-   height: 230px;
-   width: 393px;
- 
-  }
-   
- }
- @media  screen and (max-width: 384px) {
-  .parallax_background1{
-
-   height: 230px;
-   width: 384px;
- 
-  }
-   
- }
- @media  screen and (max-width: 360px) {
-  .parallax_background1{
-    
-   height: 230px;
-   width: 360px;
- 
-  }
-   
- }
 
 .parallax_background2 {
   width: 100%;
@@ -194,62 +34,6 @@
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (max-width: 480px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 480px;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 430px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 428px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 414px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 412px;
-  }
-}
-
-@media screen and (max-width: 393px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 393px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 384px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .parallax_background3 {
-    height: 230px;
-    max-width: 360px;
-  }
 }
 
  .social-btn {
@@ -348,54 +132,6 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-@media  screen and (max-width: 500px) {
- 
-  .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-}
-@media  screen and (max-width: 428px) {
- 
-  .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-}
-@media  screen and (max-width: 414px) {
-  .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-  
 }
 
 /* The navigation menu links */

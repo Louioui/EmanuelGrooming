@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/Grooming/CSS/bubbles.css">
     <link rel="stylesheet" href="/Grooming/CSS/loginsignup.css">
     <link rel="stylesheet" href="/Grooming/CSS/flipCard.css">
-
+    <link rel="stylesheet" href="/Grooming/CSS/mediaSc.css">
     
 
 
@@ -33,7 +33,7 @@
             <div class="login-box">
                 <span class="dog-icon1">🐶</span>
                 <h2 style="text-align: center; color: #96683c;">Dog Grooming Login</h2>
-                <form  action="/Grooming/python/index.py" method="post">
+                <form action="/Grooming/html/python/index.py" method="post">
                     <div class="user-box">
                         <input type="text" name="username" id="username" required>
                         <label for="username">Username</label>
@@ -42,14 +42,16 @@
                         <input type="password" name="password" id="password" required>
                         <label for="password">Password</label>
                     </div>
-                    <div class="modal-buttons">
+                    <div class="modal-buttons"> 
+
+                      <button type="button" onclick="document.getElementById('loginModal').style.display='none'">
+                          Cancel
+                        </button>
+
                         <button type="submit" onclick="submitUser()" >
                           Submit
                         </button>
-                        <button type="button" onclick="document.getElementById('loginModal').style.display='none'">
-                          
-                          Cancel
-                        </button>
+                       
                     </div>
                 </form>
             </div>
@@ -61,7 +63,7 @@
             <div class="sign-up-box">
                 <div class="dog-icon2">🐶</div>
                 <h2 style="text-align: center; color: #96683c;">Sign Up</h2>
-                <form  method="post" action="/Grooming/python/index.py">
+                <form  method="post" action="/Grooming/html/python/index.py">
                     <div class="user-box">
                         <input type="text" name="username" id="userName" required>
                         <label for="username">Username</label>
@@ -87,7 +89,7 @@
           <div class="dog-details-box">
               <div class="dog-icon3">🐾</div>
               <h2 style="text-align: center; color: #4CAF50;">Dog Details</h2>
-              <form  method="post" action="/Grooming/python/index.py">
+              <form  method="post" action="/Grooming/html/python/index.py">
                   <div class="dog-box">
                       <label for="dogName">Dog's Name</label>
                       <input type="text" name="dog_name" id="dogName" required>
@@ -425,8 +427,9 @@
                   <!-- Add more fields as needed -->
       
                   <div class="modal-buttons">
+                    <button type="button" onclick="document.getElementById('dogDetailsModal').style.display='none'">Cancel</button>
                       <button type="submit" onclick="submitDogDetails()">Submit</button>
-                      <button type="button" onclick="document.getElementById('dogDetailsModal').style.display='none'">Cancel</button>
+                      
                   </div>
               </form>
           </div>
@@ -481,8 +484,8 @@
   </p>
   <div class="twopuppies">
 
-  <img src="/Grooming/assets/photos/all-dog-breeds-left__1_.png" alt=""> 
-  <img src="/Grooming/assets/photos/all-dog-breeds-right__1_.png" alt="">
+  <img src="/Grooming/assets/photos/all-dog-breeds-left__1_.png" alt="bulldog" class="dogIcon1"> 
+  <img src="/Grooming/assets/photos/all-dog-breeds-right__1_.png" alt="pomeranian" class="dogIcon2">
 
 </div>
   <button class="contactbtn" type="button" name="button">CONTACT</button>
