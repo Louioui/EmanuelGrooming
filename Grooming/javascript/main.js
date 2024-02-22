@@ -25,7 +25,7 @@ function submitUser(event) {
     formData.append('username', username);
     formData.append('password', password);
 
-    fetch('/Grooming/html/python/index.py', {
+    fetch('/submit_form', {  // Update the URL to point to your server endpoint
         method: 'POST',
         body: formData
     })
@@ -34,6 +34,11 @@ function submitUser(event) {
         console.log(data);
         // Handle the response from the server
         // You can perform additional actions based on the server response
+        if (data.success) {
+            alert('Form submitted successfully');
+        } else {
+            alert('Failed to submit form: ' + data.message);
+        }
     })
     .catch(error => {
         console.error('Error:', error);
@@ -41,6 +46,7 @@ function submitUser(event) {
 
     document.getElementById('loginModal').style.display = 'none';
 }
+
 
 function submitDogDetails() {
 

@@ -115,5 +115,3 @@ def signup():
             return redirect(url_for('index'))  # Redirect back to the signup page
 
 
-
-
