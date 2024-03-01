@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/Grooming/CSS/loginsignup.css">
     <link rel="stylesheet" href="/Grooming/CSS/flipCard.css">
     <link rel="stylesheet" href="/Grooming/CSS/mediaSc.css"> 
-    
+    <link rel="stylesheet" href="/Grooming/bootstrap-5.3.3-dist copy/css/bootstrap-grid.css"> 
 
 
     <title>Document</title>
@@ -439,7 +439,7 @@
       </div>
  
 <!--bubbles-->
-    <div class="bubbles">
+    <div class="bubbles" >
 
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
@@ -470,6 +470,87 @@
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         
+        <script>
+// Function to show bubbles one by one with specified delays
+function showBubbles() {
+    var bubbles = document.querySelectorAll('.bubbles img');
+
+    bubbles.forEach(function(bubble, index) {
+        var delay = getBubbleDelay(index);
+        setTimeout(function() {
+            bubble.style.display = 'inline-block';
+        }, delay * 1000); // Convert seconds to milliseconds
+    });
+}
+
+// Get the delay for each bubble based on its index
+function getBubbleDelay(index) {
+    switch(index) {
+        case 0:
+            return 2;
+        case 1:
+            return 1;
+        case 2:
+            return 3;
+        case 3:
+            return 4.4;
+        case 4:
+            return 3.8;
+        case 5:
+            return 6;
+        case 6:
+            return 7;
+        case 7:
+            return 2.4;
+        case 8:
+            return 1;
+        case 9:
+            return 3;
+        case 10:
+            return 5;
+        case 11:
+            return 6;
+        case 12:
+            return 3.5;
+        case 13:
+            return 4.2;
+        case 14:
+            return 2;
+        case 15:
+            return 1.6;
+        case 16:
+            return 3.1;
+        case 17:
+            return 4.8;
+        case 18:
+            return 3.8;
+        case 19:
+            return 5.8;
+        case 20:
+            return 7;
+        case 21:
+            return 2.1;
+        case 22:
+            return 1.4;
+        case 23:
+            return 3.9;
+        case 24:
+            return 5;
+        case 25:
+            return 6.5;
+        case 26:
+            return 4.5;
+        case 27:
+            return 4;
+        default:
+            return 0;
+    }
+}
+
+// Call the function to show bubbles
+showBubbles();
+
+        </script>
     </div>
     
   </div>
@@ -499,8 +580,7 @@
     <div class="parallax_background1">
 
     </div>
-<div class="card-container">
-
+<div class="card-container"></div>
 
     <div class="flip-card"  onclick="flipCard(this)">
         <div class="flip-card-inner">
@@ -527,7 +607,7 @@
           </div>
         </div>
       </div>
-
+    
     <div class="flip-card"  onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -541,6 +621,7 @@
         </div>
       </div>
 
+<div class="hiddenCss">
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -553,7 +634,9 @@
           </div>
         </div>
       </div>
+    </div>
 
+    <div class="hiddenCss">
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -566,7 +649,9 @@
           </div>
         </div>
       </div>
-
+    </div>
+    
+    <div class="hiddenCss">
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -579,7 +664,9 @@
           </div>
         </div>
       </div>
+    </div>
 
+    <div class="hiddenCss">
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -592,8 +679,9 @@
           </div>
         </div>
       </div>
-
-      <div class="flip-card" onclick="flipCard(this)">
+    </div>
+    
+    <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
@@ -714,8 +802,6 @@
           </div>
         </div>
       </div>
-
- 
 
    </div>
      

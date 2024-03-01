@@ -226,7 +226,7 @@
  
   .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 100%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -242,7 +242,7 @@
  
   .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 100%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -257,7 +257,7 @@
 @media  screen and (max-width: 414px) {
   .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 100%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -269,13 +269,36 @@
   }
 }
 
+
 @media screen and (min-width: 480px){
   .twopuppies img {
    margin: 10px 0px 0px 0px;
    width: 49%;
    height: 20%;
   }
+  .dogIcon2 {
+    width: 49%;
+    height: 1%;
+  }
 }
 
+
+@media screen and (max-width: 768px) {
+  .card-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+.card-container2{
+  display: none;
+}
+.hiddenCss{
+  display: none;
+}
+
+  .flip-card {
+      width: calc(50% - 20px);
+  }
+}
 
 
