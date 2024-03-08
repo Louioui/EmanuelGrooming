@@ -30,5 +30,10 @@
         "~/.local/lib/Google/google_appengine",
         "~/.local/lib/Google/google_appengine/lib/flask-0.12"
     ],
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "python.analysis.autoImportCompletions": true,
+    
+    "php.executablePath": "/path/to/php/bin/php",
+    "php.validate.executablePath": "/path/to/php/executable"
 }
