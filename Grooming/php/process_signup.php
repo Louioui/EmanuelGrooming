@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $host = 'localhost';
     $user = 'root';
     $password_db = 'password';
-    $database = 'localhost'; // Change this to your actual database name
+    $database = 'your_database'; // Change this to your actual database name
 
     // Create a database connection
     $conn = new mysqli($host, $user, $password_db, $database);
@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmtDog->bind_param("isss", $userId, $dogName, $selectedBreed, $age);
 
         if ($stmtDog->execute()) {
-            // Registration successful, echo a JavaScript script to redirect
-            echo "<script>window.location.href='/Grooming/html/dashboard.html';</script>";
+            // Registration successful, redirect to dashboard
+            header('Location:/Grooming/html/python/dashboard.html');
             exit(); // Ensure that no further code is executed after the redirect
         } else {
             echo "Registration failed for dog details: " . $stmtDog->error;
@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "Invalid request";
 }
-?>
+
+
 
 

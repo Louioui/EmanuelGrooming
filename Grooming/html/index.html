@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/Grooming/CSS/loginsignup.css">
     <link rel="stylesheet" href="/Grooming/CSS/flipCard.css">
     <link rel="stylesheet" href="/Grooming/CSS/mediaSc.css"> 
-    <link rel="stylesheet" href="/Grooming/bootstrap-5.3.3-dist copy/css/bootstrap-grid.css"> 
 
 
     <title>Document</title>
@@ -33,7 +32,7 @@
   <div class="login-box">
       <span class="dog-icon1">🐶</span>
       <h2 style="text-align: center; color: #96683c;">Dog Grooming Login</h2>
-      <form action="/Grooming/html/python/LoginView.py" method="post">
+      <form action="/Grooming/python/LoginView.py" method="post">
       
           <div class="user-box">
               <input type="text" name="username" id="username" required>
@@ -56,7 +55,7 @@
   <div class="sign-up-box">
       <div class="dog-icon2">🐶</div>
       <h2 style="text-align: center; color: #96683c;">Sign Up</h2>
-      <form action="python/SignupView.py" method="post">
+      <form action="/Grooming/python/SignupView.py" method="post">
           
           <div class="user-box">
               <input type="text" name="username" id="userName" required>
@@ -83,7 +82,7 @@
   <div class="dog-details-box">
       <div class="dog-icon3">🐾</div>
       <h2 style="text-align: center; color: #4CAF50;">Dog Details</h2>
-      <form action="/Grooming/html/python/addDogView.py" method="post">
+      <form action="/Grooming/python/addDogView.py" method="post">
        
           <div class="dog-box">
               <label for="dogName">Dog's Name</label>
@@ -113,7 +112,7 @@
       </div>
  
 <!--bubbles-->
-    <div class="bubbles" >
+    <div class="bubbles">
 
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
@@ -145,84 +144,29 @@
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         
         <script>
-// Function to show bubbles one by one with specified delays
-function showBubbles() {
-    var bubbles = document.querySelectorAll('.bubbles img');
+ // Create and append bubble images
+function createBubbles() {
+    console.log("Creating bubbles...");
+    var bubbleContainer = document.querySelector('.bubbles');
+    var bubbleCount = 28; // Number of bubbles
 
-    bubbles.forEach(function(bubble, index) {
-        var delay = getBubbleDelay(index);
-        setTimeout(function() {
-            bubble.style.display = 'inline-block';
-        }, delay * 1000); // Convert seconds to milliseconds
-    });
-}
-
-// Get the delay for each bubble based on its index
-function getBubbleDelay(index) {
-    switch(index) {
-        case 0:
-            return 2;
-        case 1:
-            return 1;
-        case 2:
-            return 3;
-        case 3:
-            return 4.4;
-        case 4:
-            return 3.8;
-        case 5:
-            return 6;
-        case 6:
-            return 7;
-        case 7:
-            return 2.4;
-        case 8:
-            return 1;
-        case 9:
-            return 3;
-        case 10:
-            return 5;
-        case 11:
-            return 6;
-        case 12:
-            return 3.5;
-        case 13:
-            return 4.2;
-        case 14:
-            return 2;
-        case 15:
-            return 1.6;
-        case 16:
-            return 3.1;
-        case 17:
-            return 4.8;
-        case 18:
-            return 3.8;
-        case 19:
-            return 5.8;
-        case 20:
-            return 7;
-        case 21:
-            return 2.1;
-        case 22:
-            return 1.4;
-        case 23:
-            return 3.9;
-        case 24:
-            return 5;
-        case 25:
-            return 6.5;
-        case 26:
-            return 4.5;
-        case 27:
-            return 4;
-        default:
-            return 0;
+    for (var i = 0; i < bubbleCount; i++) {
+        var bubbleImg = document.createElement('img');
+        bubbleImg.src = "/Grooming/assets/png/bubble.png";
+        bubbleImg.alt = "bubbles";
+        bubbleImg.style.animationDelay = getRandomDelay() + "s"; // Set random animation delay
+        bubbleContainer.appendChild(bubbleImg);
     }
 }
 
-// Call the function to show bubbles
-showBubbles();
+// Get random animation delay between 1s and 7s
+function getRandomDelay() {
+    return Math.floor(Math.random() * 7) + 1;
+}
+
+// Call the function to create bubbles
+createBubbles();
+
 
         </script>
     </div>

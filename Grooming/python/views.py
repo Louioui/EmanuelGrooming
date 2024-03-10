@@ -16,11 +16,11 @@ def user_login(request):
         if user is not None:
             login(request, user)
             messages.success(request, 'Login successful!')
-            return redirect('dashboard')  # Redirect to the dashboard page
+            return redirect('/Grooming/html/dashboard.html')
         else:
             messages.error(request, 'Invalid username or password. Please try again.')
             return redirect('index')
-    return render(request, 'index.html')
+    return render(request, '/Grooming/html/index.html')
 
 @login_required
 def signup(request):
@@ -33,13 +33,13 @@ def signup(request):
             user = User.objects.create_user(username=username, email=email, password=password)
             login(request, user)
             messages.success(request, 'Account created successfully!')
-            return redirect('dashboard')  # Redirect to the dashboard page
+            return redirect('/Grooming/html/dashboard.html')
         else:
             messages.error(request, 'Error in form submission. Please check your inputs.')
-            return redirect('index')
+            return redirect('/Grooming/html/index.html')
     else:
         form = SignupForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, '/Grooming/html/index.html', {'form': form})
 
 @login_required
 def add_dog(request):
@@ -52,11 +52,16 @@ def add_dog(request):
             customer, created = Customer.objects.get_or_create(user=request.user)
             dog = Dog.objects.create(customer=customer, dog_name=dog_name, breed=breed, age=age)
             messages.success(request, 'Dog added successfully!')
-            return redirect('dashboard')  # Redirect to the dashboard page
+            return redirect('/Grooming/html/dashboard.html')
         else:
             messages.error(request, 'Error in form submission. Please check your inputs.')
             return redirect('index')
     else:
         form = DogDetailsForm()
-    return render(request, 'add_dog.html', {'form': form})
+    return render(request, '/Grooming/html/index.html', {'form': form})
+
+@login_required
+def dashboard(request):
+    return render(request, '/Grooming/html/dashboard.html')
+
 
