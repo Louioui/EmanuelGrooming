@@ -28,7 +28,7 @@
 .login-box,
 .sign-up-box,
 .dog-details-box {
-  background-color: #f5e3c1;
+  background-color:  #f5e3c1;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #96683c;
@@ -49,7 +49,7 @@ input[type="email"],
   padding: 10px;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #96683c;
+  border-bottom: 1px solid #ffffff;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 17px;

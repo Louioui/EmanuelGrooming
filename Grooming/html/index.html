@@ -34,7 +34,7 @@
       <h2 style="text-align: center; color: #96683c;">Dog Grooming Login</h2>
       <form action="/Grooming/python/LoginView.py" method="post">
       
-          <div class="user-box">
+          <div class="user-box"> 
               <input type="text" name="username" id="username" required>
               <label for="username">Username</label>
           </div>
@@ -142,36 +142,8 @@
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
         <img src="/Grooming/assets/png/bubble.png" alt="bubbles">
-        
-        <script>
- // Create and append bubble images
-function createBubbles() {
-    console.log("Creating bubbles...");
-    var bubbleContainer = document.querySelector('.bubbles');
-    var bubbleCount = 28; // Number of bubbles
-
-    for (var i = 0; i < bubbleCount; i++) {
-        var bubbleImg = document.createElement('img');
-        bubbleImg.src = "/Grooming/assets/png/bubble.png";
-        bubbleImg.alt = "bubbles";
-        bubbleImg.style.animationDelay = getRandomDelay() + "s"; // Set random animation delay
-        bubbleContainer.appendChild(bubbleImg);
-    }
-}
-
-// Get random animation delay between 1s and 7s
-function getRandomDelay() {
-    return Math.floor(Math.random() * 7) + 1;
-}
-
-// Call the function to create bubbles
-createBubbles();
-
-
-        </script>
+      
     </div>
-    
-  </div>
 
   <!--content-text & about-->         
 
@@ -198,12 +170,12 @@ createBubbles();
     <div class="parallax_background1">
 
     </div>
-<div class="card-container"></div>
+<div class="card-container">
 
     <div class="flip-card"  onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="/Grooming/assets/photos/beautiful.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="/Grooming/assets/photos/beautiful.jpg" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -212,38 +184,11 @@ createBubbles();
           </div>
         </div>
       </div>
-
-      <div class="flip-card"  onclick="flipCard(this)">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
-          </div>
-        </div>
-      </div>
-    
-    <div class="flip-card"  onclick="flipCard(this)">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
-          </div>
-        </div>
-      </div>
-
 <div class="hiddenCss">
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -258,7 +203,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -273,7 +218,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -288,7 +233,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -302,7 +247,7 @@ createBubbles();
     <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -318,7 +263,7 @@ createBubbles();
     <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -331,7 +276,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -344,7 +289,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -357,34 +302,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="flip-card" onclick="flipCard(this)">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-          </div>
-          <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect & Engineer</p>
-            <p>We love that guy</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip-card" onclick="flipCard(this)">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -398,7 +316,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>
@@ -411,7 +329,7 @@ createBubbles();
       <div class="flip-card" onclick="flipCard(this)">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img src="img_avatar.png" alt="Avatar">
           </div>
           <div class="flip-card-back">
             <h1>John Doe</h1>

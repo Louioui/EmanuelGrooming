@@ -1,3 +1,5 @@
+#forms.py
+
 from django import forms
 
 class SignupForm(forms.Form):
@@ -9,3 +11,16 @@ class DogDetailsForm(forms.Form):
     dog_name = forms.CharField(max_length=50)
     breed = forms.CharField(max_length=50)
     age = forms.IntegerField()
+
+# from django import forms
+#from .models import User, Dog
+
+#class SignupForm(forms.ModelForm):
+    #class Meta:
+        #model = User
+        #fields = ['username', 'email', 'password']
+
+#class DogDetailsForm(forms.ModelForm):
+    #class Meta:
+        #model = Dog
+        #fields = ['dog_name', 'breed', 'age']
