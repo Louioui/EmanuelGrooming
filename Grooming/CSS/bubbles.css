@@ -1,114 +1,79 @@
-.bubbles img{
-    width: 50px;
-    animation: bubble 6s linear infinite;
-}
-.bubbles{
+/* bubbles.css */
+
+.bubbles {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    bottom: -70px;
+    bottom: -70px; /* Adjust as needed */
+    z-index: 10; /* Ensure bubbles appear above other content */
 }
+
+.bubbles img {
+    width: 50px; /* Adjust size as needed */
+    animation: bubble 6s linear infinite;
+}
+
 @keyframes bubble {
-    0%{
+    0% {
         transform: translateY(0);
-        opacity: 0;
+        opacity: 1; /* Start fully visible */
     }
-    50%{
-        transform: translateY(0);
-        opacity: 1;
+    50% {
+        opacity: 1; /* Stay visible */
     }
-    70%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-80vh);
-        opacity: 0;
+    100% {
+        transform: translateY(-80vh); /* Move up */
+        opacity: 0; /* Fade out */
     }
 }
-.bubbles img:nth-child(1){
-    animation-delay: 2s;
+
+/* Individual bubble animation delays */
+.bubbles img:nth-child(1) { animation-delay: 2s; }
+.bubbles img:nth-child(2) { animation-delay: 1s; }
+.bubbles img:nth-child(3) { animation-delay: 3s; }
+.bubbles img:nth-child(4) { animation-delay: 4.4s; }
+.bubbles img:nth-child(5) { animation-delay: 3.8s; }
+.bubbles img:nth-child(6) { animation-delay: 6s; }
+.bubbles img:nth-child(7) { animation-delay: 7s; }
+.bubbles img:nth-child(8) { animation-delay: 2.4s; }
+.bubbles img:nth-child(9) { animation-delay: 1s; }
+.bubbles img:nth-child(10) { animation-delay: 3s; }
+.bubbles img:nth-child(11) { animation-delay: 5s; }
+.bubbles img:nth-child(12) { animation-delay: 6s; }
+.bubbles img:nth-child(13) { animation-delay: 3.5s; }
+.bubbles img:nth-child(14) { animation-delay: 4.2s; }
+.bubbles img:nth-child(15) { animation-delay: 2s; }
+.bubbles img:nth-child(16) { animation-delay: 1.6s; }
+.bubbles img:nth-child(17) { animation-delay: 3.1s; }
+.bubbles img:nth-child(18) { animation-delay: 4.8s; }
+.bubbles img:nth-child(19) { animation-delay: 3.8s; }
+.bubbles img:nth-child(20) { animation-delay: 5.8s; }
+.bubbles img:nth-child(21) { animation-delay: 7s; }
+.bubbles img:nth-child(22) { animation-delay: 2.1s; }
+.bubbles img:nth-child(23) { animation-delay: 1.4s; }
+.bubbles img:nth-child(24) { animation-delay: 3.9s; }
+.bubbles img:nth-child(25) { animation-delay: 5s; }
+.bubbles img:nth-child(26) { animation-delay: 6.5s; }
+.bubbles img:nth-child(27) { animation-delay: 4.5s; }
+.bubbles img:nth-child(28) { animation-delay: 4.0s; }
+
+/* Media queries to hide bubbles on iPhone screens */
+@media screen and (min-width: 375px) { /* iPhone 6/7/8 */
+    .hide-bubble {
+        display: none !important; /* Force hidden */
+    }
 }
-.bubbles img:nth-child(2){
-    animation-delay: 1s;
+
+@media screen and (min-width: 320px) { /* iPhone SE */
+    .hide-bubble {
+        display: none !important; /* Force hidden */
+    }
 }
-.bubbles img:nth-child(3){
-    animation-delay: 3s;
-}
-.bubbles img:nth-child(4){
-    animation-delay: 4.4s;
-}
-.bubbles img:nth-child(5){
-    animation-delay: 3.8s;
-}
-.bubbles img:nth-child(6){
-    animation-delay: 6s;
-}
-.bubbles img:nth-child(7){
-    animation-delay: 7s;
-}
-.bubbles img:nth-child(8){
-    animation-delay: 2.4s;
-}
-.bubbles img:nth-child(9){
-    animation-delay: 1s;
-}
-.bubbles img:nth-child(10){
-    animation-delay: 3s;
-}
-.bubbles img:nth-child(11){
-    animation-delay: 5s;
-}
-.bubbles img:nth-child(12){
-    animation-delay: 6s;
-}
-.bubbles img:nth-child(13){
-    animation-delay: 3.5s;
-}
-.bubbles img:nth-child(14){
-    animation-delay: 4.2s;
-}
-.bubbles img:nth-child(15){
-    animation-delay: 2s;
-}
-.bubbles img:nth-child(16){
-    animation-delay: 1.6s;
-}
-.bubbles img:nth-child(17){
-    animation-delay: 3.1s;
-}
-.bubbles img:nth-child(18){
-    animation-delay: 4.8s;
-}
-.bubbles img:nth-child(19){
-    animation-delay: 3.8s;
-}
-.bubbles img:nth-child(20){
-    animation-delay: 5.8s;
-}
-.bubbles img:nth-child(21){
-    animation-delay: 7s;
-}
-.bubbles img:nth-child(22){
-    animation-delay: 2.1s;
-}
-.bubbles img:nth-child(23){
-    animation-delay: 1.4s;
-}
-.bubbles img:nth-child(24){
-    animation-delay: 3.9s;
-}
-.bubbles img:nth-child(25){
-    animation-delay: 5s;
-}
-.bubbles img:nth-child(26){
-    animation-delay: 6.5s;
-}
-.bubbles img:nth-child(27){
-    animation-delay: 4.5s;
-}
-.bubbles img:nth-child(28){
-    animation-delay: 4.0s;
+
+@media screen and (min-width: 414px) { /* iPhone 6+/7+/8+ */
+    .hide-bubble {
+        display: none !important; /* Force hidden */
+    }
 }

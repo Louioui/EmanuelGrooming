@@ -1,11 +1,14 @@
+// Function to open the navigation side panel
 function openNav() {
     document.getElementById("mySidenav").style.width = "50%";
 }
 
+// Function to close the navigation side panel
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+// Event listener to close modal on background click
 document.body.addEventListener('click', function (event) {
     let modals = document.getElementsByClassName('modal');
     for (const element of modals) {
@@ -15,8 +18,11 @@ document.body.addEventListener('click', function (event) {
     }
 });
 
+// Function to submit user login data
 function submitUser(event) {
     event.preventDefault();
+
+    if (!validateSignUpForm()) return; // Check validation
 
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
@@ -25,15 +31,13 @@ function submitUser(event) {
     formData.append('username', username);
     formData.append('password', password);
 
-    fetch('/submit_form', {  // Update the URL to point to your server endpoint
+    fetch('/submit_form', { // Update the URL to point to your server endpoint
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        // Handle the response from the server
-        // You can perform additional actions based on the server response
         if (data.success) {
             alert('Form submitted successfully');
         } else {
@@ -42,17 +46,19 @@ function submitUser(event) {
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('An error occurred while submitting the form. Please try again.');
     });
 
     document.getElementById('loginModal').style.display = 'none';
 }
 
-
+// Function to submit dog details
 function submitDogDetails() {
-
     let dogName = document.getElementById('dogName').value;
     let breed = document.getElementById('breedSelect').value;
     let age = document.getElementById('age').value;
+
+    if (!validateDogDetailsForm()) return; // Check validation
 
     let formData = new FormData();
     formData.append('dog_name', dogName);
@@ -66,19 +72,20 @@ function submitDogDetails() {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        // Handle the response from the server
-        // You can perform additional actions based on the server response
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('An error occurred while submitting the dog details. Please try again.');
     });
 
     document.getElementById('dogDetailsModal').style.display = 'none';
 }
 
-
+// Function to handle user signup
 function signupUser(event) {
     event.preventDefault();
+
+    if (!validateSignUpForm()) return; // Check validation
 
     let username = document.getElementById('userName').value;
     let email = document.getElementById('email').value;
@@ -96,22 +103,22 @@ function signupUser(event) {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        // Handle the response from the server
-        // You can perform additional actions based on the server response
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('An error occurred while signing up. Please try again.');
     });
 
     document.getElementById('signupModal').style.display = 'none';
 }
 
+// Function to show the dog details form after signup
 function showDogDetailsForm() {
-    // Add logic to show the Dog Details form, for example:
     document.getElementById('signupModal').style.display = 'none';
     document.getElementById('dogDetailsModal').style.display = 'block';
 }
 
+// Validation function for the signup form
 function validateSignUpForm() {
     let username = document.getElementById('userName').value;
     let email = document.getElementById('email').value;
@@ -122,11 +129,10 @@ function validateSignUpForm() {
         return false;
     }
 
-    // Add more validation logic as needed
-
     return true;
 }
 
+// Validation function for the dog details form
 function validateDogDetailsForm() {
     let dogName = document.getElementById('dogName').value;
     let breed = document.getElementById('breedSelect').value;
@@ -137,11 +143,10 @@ function validateDogDetailsForm() {
         return false;
     }
 
-    // Add more validation logic as needed
-
     return true;
 }
 
+// Function to filter breed options based on user input
 function filterBreeds() {
     let input = document.getElementById('breedSearch').value.toUpperCase();
     let select = document.getElementById('breedSelect');
@@ -159,7 +164,7 @@ function filterBreeds() {
     }
 }
 
-// Event listeners
+// Event listeners for modal and form interactions
 document.getElementById('signupCancelBtn').addEventListener('click', function() {
     document.getElementById('signupModal').style.display = 'none';
 });
@@ -175,10 +180,5 @@ document.getElementById('dogDetailsSubmitBtn').addEventListener('click', functio
 document.getElementById('dogDetailsCancelBtn').addEventListener('click', function() {
     document.getElementById('dogDetailsModal').style.display = 'none';
 });
-
-function flipCard(card) {
-    card.classList.toggle('clicked');
-}
-
 
 

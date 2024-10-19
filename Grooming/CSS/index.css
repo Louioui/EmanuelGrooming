@@ -16,12 +16,13 @@
 .parallax_background1{
     width: 100%;
     height: 50vh;
-    background: url(/Grooming/assets/img/puppyeyes1.jpg);
+    background: url(/Grooming/assets/png/alert-dog-gazing-curiously-indoors-cut-out-stock-png.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
+    margin-top: 100px;
 }
 
 .parallax_background2 {
@@ -160,8 +161,32 @@
 
   padding: 5%;
 }
+
 .aboutus{
   text-align: center;
+}
+
+.twopuppies {
+  display: flex;
+  flex-direction: column; /* This allows you to stack other elements like the button below */
+  align-items: center; /* Center align all items */
+}
+
+.dogIconsContainer {
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between images */
+  width: 100%; /* Make sure it takes up full width */
+}
+
+.dogIcon1, .dogIcon2 {
+  max-width: 48%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.dog-cat{
+  height: 60%;
+  width: 60%;
+  margin: 0px 0px 0px 100px;
 }
 
 button.contactbtn{
@@ -174,52 +199,8 @@ button.contactbtn{
 	border-radius: 25px;
 	cursor: pointer;
 	transition: all .3s;
-  margin-left: 45%;
 }
-@media  screen and (max-width: 430px) {
-  button.contactbtn{
-    background-color: transparent;
-    width: 200px;
-    height: 50px;
-    font-size: 0.75em;
-    color: black;
-    border: 2px solid lightblue;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all .3s;
-    margin-left: 20%;
-  }
-  
-}
-@media  screen and (max-width: 428px) {
-  button.contactbtn{
-    background-color: transparent;
-    width: 200px;
-    height: 50px;
-    font-size: 0.75em;
-    color: black;
-    border: 2px solid lightblue;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all .3s;
-    margin-left: 20%;
-  }
-  
-}
-@media  screen and (max-width: 414px) {
-  button.contactbtn{
-    background-color: transparent;
-    width: 200px;
-    height: 50px;
-    font-size: 0.75em;
-    color: black;
-    border: 2px solid lightblue;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all .3s;
-    margin-left: 20%;
-  }
-}
+
 .contactbtn:hover,
 .contactbtn:focus,
 .contactbtn:active {
@@ -253,242 +234,6 @@ button.contactbtn{
 	transform: scale(1.1);
 }
 
-
-.text {
-  background-color: transparent;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-.bussinesshours>div {
-  width: 200px;
-  height: 200px;
-  background-color: white;
-  margin-top: 100px;
-}
-
-.bussinesshours {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-@media screen and (max-width: 480px) {
-  .bussinesshours {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Adjust the gap between elements as needed */
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .bussinesshours {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px; /* Adjust the gap between elements as needed */
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .bussinesshours {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px; /* Adjust the gap between elements as needed */
-  }
-}
-
-/* Add more media queries for smaller screen sizes if needed */
-
-
-.hours {
-  margin-top: 30%;
-  margin-left: -60%;
-  display: flex;
-}
-
-.closedhr {
-  margin-top: 30%;
-  margin-left: -45%;
-}
-
-.x {
-  margin-left: -40%;
-}
-
-.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday {
-  font-size: larger;
-  font-weight: bolder;
-  display: flex;
-  margin-top: 50px;
-  margin-left: 60px;
-}
-
-@media screen and (max-width: 480px) {
-  .bussinesshours>div {
-    width: 200px;
-    height: 200px;
-    background-color: white;
-  }
-
-  .bussinesshours {
-    display: grid;
-    grid-template-columns: max-content;
-  }
-}
-
-/* Repeat the following media queries with adjusted widths as needed */
-
-@media screen and (max-width: 480px) {
-  .googleMaps {
-    width: 480px;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .googleMaps {
-    width: 430px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .googleMaps {
-    width: 428px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .googleMaps {
-    width: 414px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .googleMaps {
-    width: 412px;
-  }
-}
-
-@media screen and (max-width: 393px) {
-  .googleMaps {
-    width: 393px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .googleMaps {
-    width: 384px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .googleMaps {
-    width: 360px;
-  }
-}
-.twopuppies{
-  margin: 0% 0% 0% 20%;
-}
-.twopuppies img {
- width: auto;
- height: auto;
-
-}
-
-@media screen and (max-width: 480px){
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
- .twopuppies img{
-  width: 480px;
-  height: 480px;
- };
-}
-@media  screen and (max-width: 430px) {
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
-
-.twopuppies img {
-  width: 430px;
-  height: 430px;
-};
-  
-}
-@media  screen and (max-width: 428px) {
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
- 
-   .twopuppies img {
-    width: 430px;
-    height: 430px;
-   }
- }
- @media  screen and (max-width: 414px) {
-  
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
-
- .twopuppies img{
-  width: 414px;
-  height: 414px;
- }
-   
- }
- @media screen and (max-width: 412px) {
-
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
-
- .twopuppies img{
-  width: 414px;
-  height: 414px;
- }
- }
- @media  screen and (max-width: 393px) {
-  
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
-
- .twopuppies img{
-  width: 414px;
-  height: 414px;
- }
-   
- }
- @media screen and (max-width: 384px) {
-  
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
-
- .twopuppies img{
-  width: 414px;
-  height: 414px;
- }
-   
- }
- @media screen and (max-width: 360px) {
-  
-  .twopuppies{
-    margin: auto auto auto auto;
-    padding: auto auto auto auto;
-  }
-
- .twopuppies img{
-  width: 414px;
-  height: 414px;
- }
- }
 
 
 
